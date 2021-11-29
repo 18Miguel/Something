@@ -1,20 +1,18 @@
-
 .mainvideo::-webkit-scrollbar{
   width: 11px;
   background: transparent;
 }
 
 .mainvideo::-webkit-scrollbar-thumb{
-  background-color: #181818;
+  background-color: #d4d4d4;
   border-radius: 20px;
 }
 
 .mainvideo{
   overflow: overlay;
-  background-image: linear-gradient(100deg, #A57283 0%, #463138 100%);
+  background-color: #181818;
   display: grid;
   grid-template-columns: 5% 1fr 1fr 1fr 1fr 5%;
-  /*grid-template-rows: ;*/
   height: 100vh;
   width: 100%;
 }
@@ -22,13 +20,11 @@
 .swiper-container{
   grid-column: 2/6;
   width: 100%;
-  min-height: 100vh;
+  min-height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  padding-top: 10px;
-  padding-bottom: 10%;
 }
 
 #valorant.game-title{
@@ -82,28 +78,29 @@
   }
 }
 
-.swiper-slide.raze{
-  background-image: url('./Images/Raze.jpg');
-}
-.swiper-slide.killjoy{
-  background-image: url('./Images/Killjoy.jpg');
-}
-.swiper-slide.reyna{
-  background-image: url('./Images/Reyna.jpg');
-}
-.swiper-slide.sage{
-  background-color: #59a5a5;
-}
-.swiper-slide.skye{
-  background-color: #5ab679;
-}
+.swiper-slide.raze{background-image: url('./Images/Raze.jpg');}
 
+.swiper-slide.killjoy{background-image: url('./Images/Killjoy.jpg');}
+
+.swiper-slide.skye{background-image: url('./Images/Skye.jpg');}
+
+.swiper-slide.sage{background-image: url('./Images/Sage.jpg');}
+
+.swiper-slide.jett{background-image: url('./Images/Jett.jpg');}
+
+.swiper-slide.reyna{background-image: url('./Images/Reyna.jpg');}
+
+.swiper-slide.cypher{background-image: url('./Images/Cypher.jpg');}
+
+.swiper-slide.phoenix{background-image: url('./Images/Phoenix.jpg');}
+
+.swiper-slide.yoru{background-image: url('./Images/Yoru.jpg');}
 
 .content{
   cursor: grab;
   width: 100%;
   height: 100%;
-  padding: 10%;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -113,23 +110,19 @@
   cursor: pointer;
   text-decoration: none;
   text-align: center;
-  background-color: #333333ED;
-  padding: 2% 8%;
-  border-radius: 25px;
+  background-color: #202020ED;
+  padding: 1% 25%;
+  border-radius: 10px 10px 0 0;
   color: #FFFFFF;
   font-size: 1.1rem;
   font-weight: 600;
 }
 .content p:active{
-  background-color: #333333ED;
-  color: #FFFFFFAF;
+  color: #FFFFFF9F;
 }
 
-.valorant-library{
+.gallery{
   grid-column: 2/6;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .character-name{
@@ -139,48 +132,80 @@
   color: #FFFFFF;
   grid-column: 1/2;
 }
-/*
-#valorant-raze{
-  grid-column: 1/2;
+
+.video-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-#valorant-killjoy{
-  grid-column: 1/2;
-}*/
+.video-container .video{
+  height: 14rem;
+  /*aspect-ratio: 16/9;*/
+  width: 25rem;
+  margin: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border-radius: 1rem;
+}
 
-.valorant-library iframe{
-  padding: 2%;
+.video-container .video video, .video-container .video iframe{
+  height: 100%;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  border-style: none;
-  border-radius: 13px;
-  transition: 50ms;
+  object-fit: cover;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
-.valorant-library iframe:hover{
-  transition: 50ms;
-  padding: 1%;
-  border-radius: 0;
+.video-container .video video:hover, .video-container .video iframe:hover{
+  transition: 0.2s linear;
+  transform: scale(1.05);
+}
+
+.video-container .video .active{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: 1.5%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 80%;
+  box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.video-container .video .active:hover{
+  transition: none;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 
 @media (max-width: 1024px){
-    .mainvideo{
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: 5% 1fr 5%;
-      background-image: linear-gradient(135deg, #344444 0%, #3e8d8d 100%);
-      display: flex;
-      justify-content: center;
-    }
-  
-    .swiper-container{
-      grid-column: 2/3;
-      color: #FFFFFF;
-    }
-
-    .swiper-slide{
-      width: 100%;
-      height: 75%;
-    }
+  .mainvideo{
+    background-image: linear-gradient(135deg, #344444 0%, #3e8d8d 100%);
+    width: 100%;
+    height: 100%;
   }
+
+  #valorant.game-title, #overwatch.game-title, .swiper-container{
+    grid-column: 2/6;
+  }
+  #valorant.game-title, #overwatch.game-title{
+    padding-top: 16%;
+    padding-bottom: 4%;
+  }
+
+  .swiper-container{
+    min-height: 50vh;
+  }
+
+  .swiper-slide{
+    height: auto;
+  }
+
+  .valorant-library{
+    grid-column: 2/6;
+    display: grid;
+  }
+}
