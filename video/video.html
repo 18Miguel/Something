@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  <meta name="theme-color" content="#a57283">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/> <!--Character Cards-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> <!--Scroll to top-->
   <link rel="stylesheet" href="../style.css"> <!--css style index-->
   <link rel="stylesheet" href="style.css"> <!--css style video-->
   <title>Something_</title>
@@ -27,8 +29,8 @@
         <header>
           <div class="overlay">
             <!--************************************************************************-->
-
-            <div class="mainvideo">
+            <div id="MainVideo" class="mainvideo" onscroll="ScrollFunction()">
+              <button onclick="ScrollToTop()" id="scroll-to-top" title="Scroll to top"></button>
               <!---_-_-_-_-_-_-_-_-_-_-_-_-_--Valorant--_-_-_-_-_-_-_-_-_-_-_-_-_--->
               <div id="valorant" class="game-title">Valorant_</div>
               <div class="swiper-container valorant">
@@ -65,6 +67,13 @@
                       <a href="#valorant-jett">
                           <div class="content jett">
                               <p>Jett_</p>
+                          </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide viper">
+                      <a href="#valorant-viper">
+                          <div class="content viper">
+                              <p>Viper_</p>
                           </div>
                       </a>
                     </div>
@@ -147,66 +156,138 @@
                   </div>
               </div>
               <!--==================================================================================================================================-->
-              <!---_-_-_-_-_-_-_-_-_-_-_--Valorant  Library--_-_-_-_-_-_-_-_-_-_-_--->
               <div class="gallery">
-                  <div id="valorant-raze" class="character-name">Valorant Raze_</div>
-                  <div class="video-container">
-                    <div class="video">
-                      <video src="https://drive.google.com/uc?export=download&amp;id=1RLq_3V5zFk6JUpzRsOhOe6l3n3KgJLla" type="video/webm" controls></video>
-                    </div>
-                    <div class="video">
-                      <video src="https://drive.google.com/uc?export=download&amp;&id=1N1JDNltzkolB2R1t3gxIld2Mzjir-TyK" type="video/webm" controls></video>
-                    </div>
-                    <div class="video">
-                      <iframe src="https://drive.google.com/file/d/1UJcZ9eMd66LICLv3f30UCrui0fshKxI7/preview" allow="autoplay" allowfullscreen></iframe>
-                      <video src="https://drive.google.com/uc?export=download&id=" type='video/mp4' controls></video>
-                    </div>
-                    <div class="video">
-                      <iframe src="https://drive.google.com/file/d/1JdcBBnKctChn5NTQNh2jpggkr5BgD-RO/preview" allow="autoplay" allowfullscreen></iframe>
-                    </div>
-                    <div class="video">
-                      <iframe src="https://drive.google.com/file/d/1_3Qnoz3-rsGJMFOvkI9LvDuRNqfVPlRD/preview" allow="autoplay" allowfullscreen></iframe>
-                    </div>
+                <!---_-_-_-_-_-_-_-_-_-_-_--Valorant  Library--_-_-_-_-_-_-_-_-_-_-_--->
+                <div id="valorant-raze" class="character-name">Raze_</div>
+                <div class="video-container">
+                  <div class="video">
+                    <video src="https://drive.google.com/uc?export=download&id=1RLq_3V5zFk6JUpzRsOhOe6l3n3KgJLla" controls></video>
                   </div>
-                  
-                  <div id="valorant-killjoy" class="character-name">Valorant Killjoy_</div>
-                  <div class="video-container">
-                    <div class="video">
-                      <video src="../VALORANT  .mp4"></video>
-                    </div>
-                    <div class="video">
-                      <video src="../VALORANT  .mp4"></video>
-                    </div>
-                    <div class="video">
-                      <iframe src="https://drive.google.com/file/d/1TpqqY4F2gc5JRzu9eCRE9lAuGDue2dZC/preview" allow="autoplay" allowfullscreen></iframe>
-                    </div>
-                    <div class="video">
-                      <iframe src="https://drive.google.com/file/d/1g0aunwWNXw4u3EOeRnTOh0eXj7ToU9OX/preview" allow="autoplay" allowfullscreen></iframe>
-                    </div>
-                    <div class="video">
-                      <iframe src="https://drive.google.com/file/d/1xODK72o_YJzOUi_LPOy0Jj1WhSmbpLVE/preview" allow="autoplay" allowfullscreen></iframe>
-                    </div>
-                    <div class="video">
-                      <iframe src="https://drive.google.com/file/d/1YmscdM1zmUo4D4tjwjxW_X6nnB1rn6Va/preview" allow="autoplay" allowfullscreen></iframe>
-                    </div>
-                    <div class="video">
-                      <iframe src="https://drive.google.com/file/d/1GbSef8O0fTA4ROy8CjT8b2D4I-YVy-4T/preview" allow="autoplay" allowfullscreen></iframe>
-                    </div>
-                    <div class="video">
-                      <iframe src="https://drive.google.com/file/d/17KoncKrHrcaIW85NxUs5js1yCV0ygrav/preview" allow="autoplay" allowfullscreen></iframe>
-                    </div>
-                    <div class="video">
-                      <iframe src="https://drive.google.com/file/d/1PjMaNsCuL5I6_x4uCmKHj8cfeKF3L0Ii/preview" allow="autoplay" allowfullscreen></iframe>
-                    </div>
-                    <div class="video">  
-                      <iframe src="https://drive.google.com/file/d/1I3NIdUyv6p_c0-2UsFwcJkde9Buu5NHz/preview" allow="autoplay" allowfullscreen></iframe>
-                    </div>
+                  <!--div class="video">
+                    <video src="https://www.googleapis.com/drive/v3/files/1N1JDNltzkolB2R1t3gxIld2Mzjir-TyK?alt=media&key=AIzaSyA4BTQGC_5HN6h-Cz5q8Cu-Im5YVqOltLA" controls></video>
                   </div>
+                  <div class="video">
+                    <video src="https://www.googleapis.com/drive/v3/files/1UJcZ9eMd66LICLv3f30UCrui0fshKxI7?alt=media&key=AIzaSyA4BTQGC_5HN6h-Cz5q8Cu-Im5YVqOltLA" controls></video>
+                  </div>
+                  <div class="video">
+                    <video src="https://www.googleapis.com/drive/v3/files/1JdcBBnKctChn5NTQNh2jpggkr5BgD-RO?alt=media&key=AIzaSyA4BTQGC_5HN6h-Cz5q8Cu-Im5YVqOltLA" controls></video>
+                  </div-->
+                  <div class="video">
+                    <video src="https://drive.google.com/uc?export=download&id=1_3Qnoz3-rsGJMFOvkI9LvDuRNqfVPlRD" controls></video>
+                  </div>
+                </div>
+                
+                <div id="valorant-killjoy" class="character-name">Killjoy_</div>
+                <div class="video-container">
+                  <div class="video" style="text-align: center; display: flex; align-items: center; padding: 30px; margin-bottom: 1rem;">
+                    Oops, I still don't have any video with this agent.<br>Sorry!
+                  </div>
+                  <!--div class="video">
+                    <video src="https://www.googleapis.com/drive/v3/files/1TpqqY4F2gc5JRzu9eCRE9lAuGDue2dZC?alt=media&key=AIzaSyA4BTQGC_5HN6h-Cz5q8Cu-Im5YVqOltLA" controls></video>
+                  </div>
+                  <div class="video">
+                    <video src="https://www.googleapis.com/drive/v3/files/1g0aunwWNXw4u3EOeRnTOh0eXj7ToU9OX?alt=media&key=AIzaSyA4BTQGC_5HN6h-Cz5q8Cu-Im5YVqOltLA" controls></video>
+                  </div>
+                  <div class="video">
+                    <video src="https://www.googleapis.com/drive/v3/files/1xODK72o_YJzOUi_LPOy0Jj1WhSmbpLVE?alt=media&key=AIzaSyA4BTQGC_5HN6h-Cz5q8Cu-Im5YVqOltLA" controls></video>
+                  </div>
+                  <div class="video">
+                    <video src="https://drive.google.com/uc?export=download&id=1YmscdM1zmUo4D4tjwjxW_X6nnB1rn6Va" controls></video>
+                  </div>
+                  <div class="video">
+                    <video src="https://drive.google.com/uc?export=download&id=1GbSef8O0fTA4ROy8CjT8b2D4I-YVy-4T" controls></video>
+                  </div>
+                  <div class="video">
+                    <video src="https://www.googleapis.com/drive/v3/files/17KoncKrHrcaIW85NxUs5js1yCV0ygrav?alt=media&key=AIzaSyA4BTQGC_5HN6h-Cz5q8Cu-Im5YVqOltLA" controls></video>
+                  </div>
+                  <div class="video">
+                    <video src="https://drive.google.com/uc?export=download&id=1PjMaNsCuL5I6_x4uCmKHj8cfeKF3L0Ii" controls></video>
+                  </div>
+                  <div class="video">
+                    <video src="https://www.googleapis.com/drive/v3/files/1I3NIdUyv6p_c0-2UsFwcJkde9Buu5NHz?alt=media&key=AIzaSyA4BTQGC_5HN6h-Cz5q8Cu-Im5YVqOltLA" controls></video>
+                  </div-->
+                </div>
+
+                <div id="valorant-skye" class="character-name">Skye_</div>
+                <div class="video-container">
+                  <div class="video" style="text-align: center; display: flex; align-items: center; padding: 30px; margin-bottom: 1rem;">
+                    Oops, I still don't have any video with this agent.<br>Sorry!
+                  </div>
+                </div>
+
+                <div id="valorant-sage" class="character-name">Sage_</div>
+                <div class="video-container">
+                  <div class="video" style="text-align: center; display: flex; align-items: center; padding: 30px; margin-bottom: 1rem;">
+                    Oops, I still don't have any video with this agent.<br>Sorry!
+                  </div>
+                </div>
+
+                <div id="valorant-jett" class="character-name">Jett_</div>
+                <div class="video-container">
+                  <div class="video" style="text-align: center; display: flex; align-items: center; padding: 30px; margin-bottom: 1rem;">
+                    Oops, I still don't have any video with this agent.<br>Sorry!
+                  </div>
+                </div>
+
+                <div id="valorant-viper" class="character-name">Viper_</div>
+                <div class="video-container">
+                  <div class="video" style="text-align: center; display: flex; align-items: center; padding: 30px; margin-bottom: 1rem;">
+                    Oops, I still don't have any video with this agent.<br>Sorry!
+                  </div>
+                </div>
+
+                <div id="valorant-omen" class="character-name">Omen_</div>
+                <div class="video-container">
+                  <div class="video" style="text-align: center; display: flex; align-items: center; padding: 30px; margin-bottom: 1rem;">
+                    Oops, I still don't have any video with this agent.<br>Sorry!
+                  </div>
+                </div>
+
+                <div id="valorant-chamber" class="character-name">Chamber_</div>
+                <div class="video-container">
+                  <div class="video" style="text-align: center; display: flex; align-items: center; padding: 30px; margin-bottom: 1rem;">
+                    Oops, I still don't have any video with this agent.<br>Sorry!
+                  </div>
+                </div>
+
+                <div id="valorant-reyna" class="character-name">Reyna_</div>
+                <div class="video-container">
+                  <div class="video" style="text-align: center; display: flex; align-items: center; padding: 30px; margin-bottom: 1rem;">
+                    Oops, I still don't have any video with this agent.<br>Sorry!
+                  </div>
+                </div>
+
+                <div id="valorant-cypher" class="character-name">Cypher_</div>
+                <div class="video-container">
+                  <div class="video" style="text-align: center; display: flex; align-items: center; padding: 30px; margin-bottom: 1rem;">
+                    Oops, I still don't have any video with this agent.<br>Sorry!
+                  </div>
+                </div>
+
+                <div id="valorant-sova" class="character-name">Sova_</div>
+                <div class="video-container">
+                  <div class="video" style="text-align: center; display: flex; align-items: center; padding: 30px; margin-bottom: 1rem;">
+                    Oops, I still don't have any video with this agent.<br>Sorry!
+                  </div>
+                </div>
+
+                <div id="valorant-phoenix" class="character-name">Phoenix_</div>
+                <div class="video-container">
+                  <div class="video" style="text-align: center; display: flex; align-items: center; padding: 30px; margin-bottom: 1rem;">
+                    Oops, I still don't have any video with this agent.<br>Sorry!
+                  </div>
+                </div>
+
+                <div id="valorant-yoru" class="character-name">Yoru_</div>
+                <div class="video-container">
+                  <div class="video" style="text-align: center; display: flex; align-items: center; padding: 30px; margin-bottom: 1rem;">
+                    Oops, I still don't have any video with this agent.<br>Sorry!
+                  </div>
+                </div>
               </div>
+              <footer></footer>
             </div>
 
-
-            <!--************************************************************************-->
           </div>
         </header>
       </div>

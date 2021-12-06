@@ -8,15 +8,15 @@
   text-decoration: none;
   scroll-behavior: smooth;
 }
-:root {
-  --bg-dark-pink: #4b4b4b;
-  --bg-pink: #463037;
-  --bg-color: #A57283;
-  --text-color: #FFFFFF;
+:root{
+  --background: #1F2833;
+  --background2: #0B0C10;
+  --color1: #66FCF1;
+  --color2: #45A29E;
 }
 
 body{
-  background-image: linear-gradient(135deg, var(--bg-dark-pink) 0%, var(--bg-pink) 100%);
+  background-image: linear-gradient(135deg, var(--background) 0%, var(--background2) 100%);
   overflow: hidden;
 }
 
@@ -37,19 +37,18 @@ body{
 }
 
 .menu{
-  max-width: 72rem;
   width: 100%;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--text-color);
+  color: var(--color1);
 }
 
 .logo{
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--color1);
   font-size: 1.1rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -68,9 +67,9 @@ body{
 
 .bar{
   width: 1.9rem;
-  height: 1.5px;
-  border-radius: 2px;
-  background-color: var(--text-color);
+  height: 3px;
+  border-radius: 50px;
+  background-color: var(--color1);
   transition: 0.5s;
   position: relative;
 }
@@ -80,16 +79,19 @@ body{
   position: absolute;
   width: inherit;
   height: inherit;
-  background-color: var(--text-color);
+  border-radius: 50px;
+  background-color: var(--color1);
   transition: 0.5s;
 }
 
 .bar:before{
   transform: translateY(-9px);
+  border-radius: 50px;
 }
 
 .bar:after{
   transform: translateY(9px);
+  border-radius: 50px;
 }
 
 .main{
@@ -102,7 +104,7 @@ body{
   transform-style: preserve-3d;
   transition: 0.5s;
   min-height: 100vh;
-  background: url("background_01.png") no-repeat center / cover;
+  background: url("background_02.png") no-repeat center / cover;
   position: relative;
 }
 
@@ -121,7 +123,7 @@ body{
 .inner{
   max-width: 35rem;
   text-align: center;
-  color: var(--text-color);
+  color: var(--color1);
   padding: 0 2rem;
 }
 
@@ -133,10 +135,10 @@ body{
   font-family: "Poppins", sans-serif;
   margin-top: 1rem;
   padding: 0.6rem 1.8rem;
-  background-color: var(--bg-color);
+  background-color: var(--background);
   border: none;
   border-radius: 25px;
-  color: var(--text-color);
+  color: var(--color1);
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
@@ -166,7 +168,6 @@ body{
   from{
     transform: translate(0);
   }
-
   to{
     transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
   }
@@ -190,10 +191,10 @@ ul{
 
 .links a{
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--color1);
   padding: 0.7rem 0;
   display: inline-block;
-  font-size: 1rem;
+  font-size: 1.5rem;/*1rem*/
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -204,7 +205,7 @@ ul{
 }
 
 .links a:hover{
-  color: var(--bg-color);
+  color: var(--color2);
 }
 
 .container.active .links a {
@@ -241,7 +242,7 @@ ul{
   transform-style: preserve-3d;
   transform-origin: left;
   transition: 0.6s;
-  background-color: var(--bg-color);
+  background-color: #293442;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -299,11 +300,9 @@ ul{
 }
 
 
-@media (max-width: 1024px){
+@media only screen and (max-width: 1024px){
   body{
     /*overflow: hidden;*/
-    background-image: linear-gradient(135deg, var(--bg-dark-pink) 0%, var(--bg-pink) 100%);
-    background: url("background_02.png") no-repeat center / cover;
     display: grid;
     grid-template-rows: 5% 90% 5%;
   }
@@ -316,16 +315,17 @@ ul{
   @keyframes main-animation-responsive-hide{
     0%{
       opacity: 1;
-      background-image: linear-gradient(135deg, var(--bg-dark-pink) 0%, var(--bg-pink) 100%);
     }
     100%{
       opacity: 0;
-      background-image: linear-gradient(135deg, var(--bg-dark-pink) 0%, var(--bg-pink) 100%);
     }
   }
+  .container{
+    overflow: hidden;
+  }
   .container .background-menu{
-    min-width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
     animation: main-animation-responsive-hide 0.8s;
   }
   @keyframes main-animation-responsive{
@@ -333,8 +333,8 @@ ul{
     100%{ opacity: 1; }
   }
   .container.active .background-menu{
-    animation: main-animation-responsive 0.8s;
-    background-image: linear-gradient(135deg, var(--bg-dark-pink) 0%, var(--bg-pink) 100%);
+    animation: main-animation-responsive 0.8s;/*
+    background-image: linear-gradient(135deg, var(--bg-dark-pink) 0%, var(--bg-pink) 100%);*/
   }
 
   .links{
@@ -349,18 +349,18 @@ ul{
 
   .container .main{
     grid-row: 1/3;
-    background-image: none;
-    min-height: 100%;
-    min-width: 100%;
+    width: 100%;
+    min-height: 100vh;
     position: absolute;
     top: 0;
+    left: 0;
   }
-  
-  /*.overlay{
+  /*
+  .overlay{
     background-color: unset;
   }*/
+
   .container.active .main, .container.active .main:hover{
-    animation: none;
     transform: none;
     opacity: 0;
     position: unset;
