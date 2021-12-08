@@ -58,4 +58,3 @@ video.forEach(play => play.addEventListener('click', () =>{
     }*/
 }));
 /*------------- ---------------- -------------*/
-

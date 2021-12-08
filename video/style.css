@@ -1,8 +1,8 @@
 :root{
-  --background: #1F2833;
-  --background2: #0B0C10;
-  --color1: #66FCF1;
-  --color2: #45A29E;
+  --background: #110D0E;
+  --background2: #0F2530;
+  --color1: #6AD8E4;
+  --color2: #B7FEFF;
 }
 
 .main{
@@ -15,8 +15,12 @@
 }
 
 .mainvideo::-webkit-scrollbar-thumb{
-  background-color: var(--color2);
+  background-color: var(--color1);
   border-radius: 20px;
+}
+
+.mainvideo::-webkit-scrollbar-thumb:active{
+  background-color: var(--color2);
 }
 
 .mainvideo{
@@ -32,7 +36,7 @@
   content: "\f062";
   font-family: FontAwesome;
   font-size: 2.5em;
-  color: var(--color2);
+  color: var(--color1);
 }
 
 #scroll-to-top{
@@ -64,18 +68,7 @@
   overflow: hidden;
 }
 
-#valorant.game-title{
-  grid-column: 2/6;
-  padding: 5% 2% 0 2%;
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 4rem;
-  color: var(--color1);
-  z-index: 10;
-}
-#overwatch.game-title{
+.game-title{
   grid-column: 2/6;
   padding: 1% 2% 0 2%;
   font-size: 1rem;
@@ -85,6 +78,15 @@
   line-height: 4rem;
   color: var(--color1);
   z-index: 10;
+  transition: 0.3s;
+}
+
+.game-title:hover{
+  color: var(--color2);
+}
+
+#valorant.game-title{
+  padding-top: 5%;
 }
 
 .swiper-slide{
@@ -96,7 +98,6 @@
   box-shadow: none;
   animation: hide-slide 0.8s;
   filter: blur(5px);
-  /***************************DELETE LATER**********************************************/
   background-color: var(--background2);
 }
 @keyframes hide-slide{
@@ -153,17 +154,19 @@
   cursor: pointer;
   text-decoration: none;
   text-align: center;
-  background-color: #1F2833ED;
-  padding: 1% 15%;
+  background-color: var(--background);
+  padding: 1% 20%;
   border-radius: 10px 10px 0 0;
   font-size: 1rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--color1);
+  transition: 0.3s;
 }
-.content p:active{
-  color: #66FCF19F;
+.content p:active, .content p:hover{
+  color: var(--color2);
+  background-color: #110D0EFA;
 }
 
 .gallery{
@@ -171,6 +174,7 @@
 }
 
 .character-name{
+  grid-column: 1/2;
   padding: 5% 8% 1% 2%;
   font-size: 1rem;
   font-weight: 600;
@@ -178,7 +182,11 @@
   letter-spacing: 1px;
   line-height: 4rem;
   color: var(--color1);
-  grid-column: 1/2;
+  transition: 0.3s;
+}
+
+.character-name:hover{
+  color: var(--color2);
 }
 
 .video-container{
@@ -192,12 +200,12 @@
   /*height: 15rem;*/
   aspect-ratio: 16/9;
   margin: 0.5rem;
-  box-shadow: 0 0.5rem 1rem #45A29E80;
+  box-shadow: 0 0.3rem 1rem #6AD8E480;
   overflow: hidden;
   border-radius: 10px;
 }
 
-.video-container .video video, .video-container .video iframe{
+.video-container .video video{
   /*width: 100%;*/
   aspect-ratio: 16/9;
   height: 100%;
@@ -208,7 +216,7 @@
   cursor: pointer;
 }
 
-.video-container .video video:hover, .video-container .video iframe:hover{
+.video-container .video video:hover{
   transition: 0.2s linear;
   transform: scale(1.05);
 }
@@ -232,7 +240,6 @@
 
 footer{
   grid-column: 1/7;
-  background-color: var(--background);
   width: 100%;
   height: 55px;
 }
@@ -245,7 +252,7 @@ footer{
     bottom: 50px;
   }
   .mainvideo{
-    background-image: var(--background);
+    background-color: var(--background);
     width: 100%;
     height: 100%;
   }
@@ -253,6 +260,7 @@ footer{
   #valorant.game-title, #overwatch.game-title, .swiper-container{
     grid-column: 2/6;
   }
+
   #valorant.game-title, #overwatch.game-title{
     padding-top: 16%;
     padding-bottom: 4%;

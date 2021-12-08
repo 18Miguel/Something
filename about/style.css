@@ -1,0 +1,99 @@
+:root{
+    --background: #110D0E;
+    --background2: #0F2530;
+    --color1: #6AD8E4;
+    --color2: #B7FEFF;
+}
+
+.main{
+    background: none;
+}
+
+.body-about::-webkit-scrollbar{
+    width: 11px;
+    background: transparent;
+}
+
+.mainvideo::-webkit-scrollbar-thumb{
+    background-color: var(--color1);
+    border-radius: 20px;
+}
+
+.mainvideo::-webkit-scrollbar-thumb:active{
+    background-color: var(--color2);
+}
+
+.body-about{
+    overflow: overlay;
+    background-color: var(--background);
+    display: grid;
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-rows: 92% 8%;
+    height: 100vh;
+    width: 100%;
+}
+
+main{
+    grid-column: 1/4;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 5% 1fr 5%;
+}
+
+main .about{
+    grid-column: 2/3;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--color1);
+    transition: 0.3s;
+}
+
+main .about p{
+    text-align: left;
+    padding: 0 5%;
+    transition: 0.5s, text-shadow 0.5s, font-size 0.5s;
+}
+main .about p:hover{
+    font-size: 15.05px;
+    color: var(--color1);
+    text-shadow: 0 0.2px 2px var(--color2);
+}
+
+main .about .title{
+    padding: 6% 2% 2% 2%;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+main .about .title:hover{
+    color: var(--color2);
+}
+
+main .about .title._2, main .about .title._3{
+    opacity: 0;
+    transition: opacity 0.8s;
+}
+main .about .title._2.active, main .about .title._3.active{
+    opacity: 1;
+}
+
+footer{
+    grid-column: 1/4;
+    grid-row: 2/3;
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 1024px){
+    main .about .title._1{
+        padding-top: 6%;
+    }
+}
+
+@media only screen and (max-width: 920px){
+    main .about .title._1{
+        padding-top: 18%;
+    }
+}

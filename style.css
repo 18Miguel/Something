@@ -8,15 +8,19 @@
   text-decoration: none;
   scroll-behavior: smooth;
 }
-:root{
+:root{/*
   --background: #1F2833;
-  --background2: #0B0C10;
-  --color1: #66FCF1;
-  --color2: #45A29E;
+  --background2: #0B0C10;673D4D
+  --color1: #66FCF1; 825260
+  --color2: #45A29E;*/
+  --background: #110D0E;
+  --background2: #0F2530;
+  --color1: #6AD8E4;
+  --color2: #B7FEFF;
 }
 
 body{
-  background-image: linear-gradient(135deg, var(--background) 0%, var(--background2) 100%);
+  background-image: linear-gradient(190deg, var(--background) 20%, var(--background2) 100%);
   overflow: hidden;
 }
 
@@ -31,9 +35,11 @@ body{
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 99%;
   z-index: 10;
   height: 3rem;
+  
+  margin-right: 100px;
 }
 
 .menu{
@@ -43,7 +49,6 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--color1);
 }
 
 .logo{
@@ -54,6 +59,7 @@ body{
   text-transform: uppercase;
   letter-spacing: 2px;
   line-height: 4rem;
+  padding-left: 1%;
 }
 
 .hamburger-menu{
@@ -104,7 +110,7 @@ body{
   transform-style: preserve-3d;
   transition: 0.5s;
   min-height: 100vh;
-  background: url("background_02.png") no-repeat center / cover;
+  background: url("Venom.jpg") no-repeat center / cover;
   position: relative;
 }
 
@@ -114,7 +120,7 @@ body{
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(116, 107, 116, 0.20);
+  background-color: rgba(116, 107, 116, 0.12);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,10 +135,25 @@ body{
 
 .title{
   font-size: 2.7rem;
+  transition: 0.3s;
+}
+
+.title:hover{
+  color: var(--color2);
+}
+
+.inner p{
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.inner p:hover{
+  color: var(--color2);
 }
 
 .btn{
-  font-family: "Poppins", sans-serif;
+  font-weight: 600;
   margin-top: 1rem;
   padding: 0.6rem 1.8rem;
   background-color: var(--background);
@@ -142,6 +163,12 @@ body{
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
+  transition: 0.5s;
+}
+
+.btn:hover{
+  color: var(--background);
+  background-color: var(--color2);
 }
 
 .container.active .bar{
@@ -165,10 +192,10 @@ body{
 }
 
 @keyframes main-animation{
-  from{
+  0%{
     transform: translate(0);
   }
-  to{
+  100%{
     transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
   }
 }
@@ -195,7 +222,7 @@ ul{
   padding: 0.7rem 0;
   display: inline-block;
   font-size: 1.5rem;/*1rem*/
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: 0.3s;
@@ -204,7 +231,7 @@ ul{
   animation: hide 0.5s forwards ease;
 }
 
-.links a:hover{
+.links a:hover, .links a:active{
   color: var(--color2);
 }
 
@@ -234,6 +261,7 @@ ul{
 }
 
 .shadow{
+  background-color: var(--background);
   position: absolute;
   width: 100%;
   height: 100vh;
@@ -242,7 +270,6 @@ ul{
   transform-style: preserve-3d;
   transform-origin: left;
   transition: 0.6s;
-  background-color: #293442;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -333,8 +360,8 @@ ul{
     100%{ opacity: 1; }
   }
   .container.active .background-menu{
-    animation: main-animation-responsive 0.8s;/*
-    background-image: linear-gradient(135deg, var(--bg-dark-pink) 0%, var(--bg-pink) 100%);*/
+    animation: main-animation-responsive 0.8s;
+    background-image: linear-gradient(190deg, var(--background) 20%, var(--background2) 100%);
   }
 
   .links{
