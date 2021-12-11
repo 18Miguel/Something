@@ -1,6 +1,6 @@
 var txt_part1 = 'Well, the reason I developed this app/website was to put my skills into practice, and because I wanted to have a website {something mine, u know, proud of yourself} and of course for fun.';
 var txt_part2 = 'Unknown.'
-var txt_part3 = 'Somewhere . . . 😝'
+var txt_part3 = 'Somewhere_'
 var speed = 40;
 var i = 0, j = 0, k = 0;
 

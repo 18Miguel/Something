@@ -13,7 +13,7 @@
   --background2: #0B0C10;673D4D
   --color1: #66FCF1; 825260
   --color2: #45A29E;*/
-  --background: #110D0E;
+  --background: #0D0F11;
   --background2: #0F2530;
   --color1: #6AD8E4;
   --color2: #B7FEFF;
@@ -157,18 +157,21 @@ body{
   margin-top: 1rem;
   padding: 0.6rem 1.8rem;
   background-color: var(--background);
-  border: none;
-  border-radius: 25px;
+  border-radius: 12px;
   color: var(--color1);
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
   transition: 0.5s;
+  
+  border: var(--color1) 4px solid;
+  box-shadow: inset 0 0 40px 0 var(--background), 0 0 11px 1px var(--color1);
 }
 
 .btn:hover{
-  color: var(--background);
-  background-color: var(--color2);
+  color: var(--color2);
+  border-color: var(--color2);
+  background-color: var(--background2);
 }
 
 .container.active .bar{

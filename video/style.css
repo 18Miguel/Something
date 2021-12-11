@@ -1,5 +1,5 @@
 :root{
-  --background: #110D0E;
+  --background: #0D0F11;
   --background2: #0F2530;
   --color1: #6AD8E4;
   --color2: #B7FEFF;
@@ -90,7 +90,7 @@
 }
 
 .swiper-slide{
-  background-position: center;
+  background-position: initial;
   background-size: cover;
   width: 350px;
   height: auto;
@@ -99,6 +99,10 @@
   animation: hide-slide 0.8s;
   filter: blur(5px);
   background-color: var(--background2);
+  /*Border 'neon' effect*/
+  margin: 10px 0;
+  border: var(--color1) 5px solid;
+  box-shadow: inset 0 0 40px 0 var(--background), 0 0 11px 1px var(--color1);
 }
 @keyframes hide-slide{
   0%{
@@ -122,23 +126,39 @@
   }
 }
 
-.swiper-slide.raze{background-image: url('./Images/Raze.jpg');}
+.swiper-slide.raze{background-image: url('./images/Raze.png');}
 
-.swiper-slide.killjoy{background-image: url('./Images/Killjoy.jpg');}
+.swiper-slide.killjoy{background-image: url('./images/Killjoy.png');}
 
-.swiper-slide.skye{background-image: url('./Images/Skye.jpg');}
+.swiper-slide.skye{background-image: url('./images/Skye.png');}
 
-.swiper-slide.sage{background-image: url('./Images/Sage.jpg');}
+.swiper-slide.sage{background-image: url('./images/Sage.png');}
 
-.swiper-slide.jett{background-image: url('./Images/Jett.jpg');}
+.swiper-slide.jett{background-image: url('./images/Jett.png');}
 
-.swiper-slide.reyna{background-image: url('./Images/Reyna.jpg');}
+.swiper-slide.viper{background-image: url('./images/Viper.png');}
 
-.swiper-slide.cypher{background-image: url('./Images/Cypher.jpg');}
+.swiper-slide.omen{background-image: url('./images/Omen.png');}
 
-.swiper-slide.phoenix{background-image: url('./Images/Phoenix.jpg');}
+.swiper-slide.chamber{background-image: url('./images/Chamber.png');}
 
-.swiper-slide.yoru{background-image: url('./Images/Yoru.jpg');}
+.swiper-slide.reyna{background-image: url('./images/Reyna.png');}
+
+.swiper-slide.cypher{background-image: url('./images/Cypher.png');}
+
+.swiper-slide.astra{background-image: url('./images/Astra.png');}
+
+.swiper-slide.sova{background-image: url('./images/Sova.png');}
+
+.swiper-slide.kayo{background-image: url('./images/KAY-O.png');}
+
+.swiper-slide.brimstone{background-image: url('./images/Brimstone.png');}
+
+.swiper-slide.breach{background-image: url('./images/Breach.png');}
+
+.swiper-slide.phoenix{background-image: url('./images/Phoenix.png');}
+
+.swiper-slide.yoru{background-image: url('./images/Yoru.png');}
 
 .content{
   cursor: grab;
@@ -163,6 +183,9 @@
   letter-spacing: 1px;
   color: var(--color1);
   transition: 0.3s;
+  /*Border 'neon' effect*/
+  border: var(--background) 1px solid;
+  box-shadow: inset 0 0 0 0 var(--background), 0 0 10px 0px var(--background);
 }
 .content p:active, .content p:hover{
   color: var(--color2);
@@ -199,18 +222,21 @@
   width: 22rem;
   /*height: 15rem;*/
   aspect-ratio: 16/9;
-  margin: 0.5rem;
-  box-shadow: 0 0.3rem 1rem #6AD8E480;
+  margin: 0.8rem;
   overflow: hidden;
   border-radius: 10px;
+  background-color: var(--background2);
+  /*Border 'neon' effect*/
+  border: var(--color1) 5px solid;
+  box-shadow: inset 0 0 40px 0 var(--background), 0 0 10px 0 var(--color1);
 }
 
 .video-container .video video{
-  /*width: 100%;*/
+  width: 100%;
   aspect-ratio: 16/9;
-  height: 100%;
+  /*height: 100%;*/
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 6px;
   outline: none;
   border: none;
   cursor: pointer;

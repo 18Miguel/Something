@@ -1,5 +1,5 @@
 :root{
-    --background: #110D0E;
+    --background: #0D0F11;
     --background2: #0F2530;
     --color1: #6AD8E4;
     --color2: #B7FEFF;
@@ -14,12 +14,12 @@
     background: transparent;
 }
 
-.mainvideo::-webkit-scrollbar-thumb{
+.body-about::-webkit-scrollbar-thumb{
     background-color: var(--color1);
     border-radius: 20px;
 }
 
-.mainvideo::-webkit-scrollbar-thumb:active{
+.body-about::-webkit-scrollbar-thumb:active{
     background-color: var(--color2);
 }
 
@@ -48,17 +48,6 @@ main .about{
     transition: 0.3s;
 }
 
-main .about p{
-    text-align: left;
-    padding: 0 5%;
-    transition: 0.5s, text-shadow 0.5s, font-size 0.5s;
-}
-main .about p:hover{
-    font-size: 15.05px;
-    color: var(--color1);
-    text-shadow: 0 0.2px 2px var(--color2);
-}
-
 main .about .title{
     padding: 6% 2% 2% 2%;
     font-size: 1rem;
@@ -77,6 +66,17 @@ main .about .title._2, main .about .title._3{
 }
 main .about .title._2.active, main .about .title._3.active{
     opacity: 1;
+}
+
+main .about p{
+    text-align: left;
+    padding: 0 5%;
+    transition: 0.5s, text-shadow 0.5s, font-size 0.5s;
+}
+main .about p:hover{
+    font-size: 15.05px;
+    color: var(--color1);
+    text-shadow: 0 0.2px 2px var(--color2);
 }
 
 footer{
