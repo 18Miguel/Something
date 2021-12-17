@@ -11,9 +11,10 @@ hamburger_menu.addEventListener("click", () => {
 /*-------------------------- Title Alert --------------------------*/
 let showingTitle = false;
 const interval = setInterval(() => {
-    document.title = showingTitle? 'Miguel_' : 'Something_';
+    document.title = showingTitle? "My first Website" : "By Miguel";
     showingTitle = !showingTitle;
-}, 2000);
+}, 10000); // 10 sec
 
 clearInterval(interval) //To Stop Title Alert
 /*-------------------------- ----------- --------------------------*/
+

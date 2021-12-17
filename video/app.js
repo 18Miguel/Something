@@ -37,8 +37,24 @@ var swiper = new Swiper('.swiper-container', {
 /*------------------ ---------------- -----------------*/
 
 /*------------- Videos Character -------------*/
-var video = document.querySelectorAll('video');
-function playpause(){ 
+const video = document.querySelectorAll(".video");
+video.forEach(watch => watch.addEventListener("click", () => {
+    watch.classList.toggle("active");
+    document.querySelector(".mainvideo").classList.toggle("active");
+}));
+
+/* document.querySelector(".watch").addEventListener("click", () =>{
+    document.querySelector(".watch").style.display = "none";
+}); */
+
+/*============================================================================================
+//const watch = document.querySelector('.watch');
+//const myiframe = document.querySelector('.myiframe');//#myiframe
+//const iframe = document.querySelectorAll('iframe');
+//const close = document.querySelector('.close');
+//const mainvideo = document.querySelector('.mainvideo');
+
+/*function playpause(){ 
     if(video.paused){
         video.play();
     }else{
@@ -46,15 +62,29 @@ function playpause(){
         video.currentTime = 0;
     }
 }
+document.querySelector('.watch').addEventListener("click", () => {
+    document.querySelector('#myiframe').classList.toggle("active");
+    document.querySelector('.close').classList.toggle("active");
+    document.querySelector('.mainvideo').classList.toggle("active");
+    //video.classList.toggle("active");
+});
+document.querySelector('.close').addEventListener("click", () => {
+    document.querySelector('#myiframe').classList.remove("active");
+    document.querySelector('.close').classList.remove("active");
+    document.querySelector('.mainvideo').classList.remove("active");
+});
+
+
 video.forEach(play => play.addEventListener('click', () =>{
     play.classList.toggle('active');
+    video.classList.toggle("active");
 
-    playpause();/*
+    playpause();
     if(play.paused){
         play.play();
     }else{
         play.paused();
         play.currentTime = 0;
-    }*/
+    }
 }));
-/*------------- ---------------- -------------*/
+============================================================================================*/
